@@ -24,8 +24,8 @@
         <h1>Converter</h1>
         <form>
             <div class="form-group">
-                <label for="value1">value1:</label>
-                <input type="number" class="form-control" step=0.01 name="value1" id="value1">
+                <label for="value">value:</label>
+                <input type="number" class="form-control" step=0.01 name="value" id="value">
             </div>
             <div class="form-group">
                 <label for="coeff">coeff:</label>
@@ -33,7 +33,11 @@
             </div>
             <div class="form-group">
                 <label for="result" >result:</label>
-                <input type="number" class="form-control" readonly name="result" id="result">
+                <input type="text" class="form-control" readonly name="result" id="result">
+            </div>
+            <div class="form-group">
+                <label for="inv-result" >inverse result:</label>
+                <input type="text" class="form-control" readonly name="inv-result" id="inv-result">
             </div>
             <button type="submit" class="btn" id="compute">Compute</button>
         </form>
