@@ -1,11 +1,15 @@
-$(document).ready(function(){
-    $("#compute").click(function(){
-        // alert("clicked");
+var app = angular.module("controllerApp", []);
 
-        $("#result").val(converterObj.convert($("#value").val(), $("#coeff").val()));
-        $("#inv-result").val(converterObj.convertInverse($("#value").val(), $("#coeff").val()));
-        return false;
-    });
+app.controller("myCtrl", function($scope) {
+    $scope.value = 0;
+    $scope.coeff = 0;
+    $scope.result = 0;
+    $scope.invertedResult = 0;
+
+    $scope.convert = function() {
+        $scope.result = converterObj.convert($scope.value, $scope.coeff);
+        $scope.invertedResult = converterObj.convertInverse($scope.value, $scope.coeff);
+    }
 });
 
 
